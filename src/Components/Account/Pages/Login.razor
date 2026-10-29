@@ -84,7 +84,7 @@
                 Log in
             </MudButton>
 
-            <MudButton href="Account/ForgotPassword" 
+            <MudButton href="/Account/ForgotPassword" 
                         Variant="Variant.Text" 
                         Color="Color.Primary" 
                         FullWidth="true" 
@@ -103,7 +103,7 @@
 
     [CascadingParameter]
     private HttpContext HttpContext { get; set; } = default!;
-
+     
     [SupplyParameterFromForm( FormName= "login")]
     private InputModel Input { get; set; } = new();
 
