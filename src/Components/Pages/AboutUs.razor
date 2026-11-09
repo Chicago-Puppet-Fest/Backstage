@@ -1,4 +1,5 @@
 @page "/AboutUs"
+@using MudBlazor.Charts
 
 <PageTitle>About Us</PageTitle>
 
@@ -9,69 +10,85 @@
 <MudPaper Class="pa-6 mb-6">
     <h3>What is Backstage?</h3>
 
-    <p>Backstage is an inventory management and organizational platform
-        developed for the Chicago International Puppet Theater Festival.</p>
+    <p>Backstage is the inventory management and organizational platform
+         for the Chicago International Puppet Theater Festival.</p>
 
-    <h3  class="mt-4">The Problem</h3>
+    @* <h3  class="mt-4">The Problem</h3>
 
     <p>Relying on dated spreadsheets and group chats to track merchandise
         quantity and location can be inefficient during a busy festival season.
         The Puppet Festival needed a centralized system to accurately manage
         inventory, locations, and merchandise availability in real time.
-    </p>
+    </p> *@
 
-    <h3 class="mt-4">The Opportunity
-    </h3>
-
-    <p>
-        With our team's combined development and design expertise, Backstage
-        was created to modernize inventory tracking and improve festival
-        organization through a single streamlined platform.
-    </p>
-
-    <h3 class="mt-4">Design Challenge
-    </h3>
-
-    <p>
-        The challenge was designing a platform that is easy to navigate,
-        scalable for festival operations, and accessible for both technical
-        and non-technical users.
-    </p>
 
 </MudPaper>
-
-    <h2 class="mb-2">Key Features</h2>
+    <h2 class="mb-2">Core Features</h2>
 
     <MudPaper Class="pa-6 mb-6">
        <MudList T="string" Dense="true">
-    <MudListItem>Inventory Management</MudListItem>
-    <MudListItem>Catalog Organization</MudListItem>
-    <MudListItem>Location Tracking</MudListItem>
-    <MudListItem>Sales Management</MudListItem>
-    <MudListItem>Box Packing & Accepting</MudListItem>
-    <MudListItem>Alerts & Notifications</MudListItem>
+    <MudListItem>Alerts - View low-stock and out-of-stock alerts per location.</MudListItem>
+    <MudListItem>Product Catalog - Create and view festival merchandise.</MudListItem>
+    <MudListItem>Inventory - Track and update inventory quantities by location.</MudListItem>
+    <MudListItem>Locations - Create and view locations, including theaters and vans, where merchandise is stored and/or sold at. </MudListItem>
+    <MudListItem>Pack a Box + Outgoing/Incoming Boxes - Create and pack boxes to be picked up and transported to different locations.</MudListItem>
+    <MudListItem>Sales - Record sales as they happen to update the inventory at a location in real-time. </MudListItem>
+    <MudListItem>Inventory Recount - Adjust inventory in bulk to reflect untracked sales and ensure quantities are accurate at the end of the night.</MudListItem>
 </MudList>
     </MudPaper>
 
     <h2 class="mb-2">How To Use Backstage</h2>
 
+    <h3>Sales Staff</h3>
+
     <MudPaper Class="pa-6 mb-6" >
         <ol  style="padding-left: 20px;">
-            <li>Register and confirm your account using email authentication.</li>
             <li>Login to access the dashboard and management tools.</li>
-            <li>Navigate through inventory, sales, locations, and catalog tools using the sidebar.</li>
-            <li>Use analytics and notifications tools to monitor festival operations.</li>  
+            <li>Use the sidebar to navigate the platform. Refer to "Core Features" above for more detailed descriptions of each page's use.</li>
+            <li>Recording a sale in "Sales" to update inventory or update all inventory manually in "Inventory Recount"</li>
         </ol>
     </MudPaper>
 
-    <h2 class="mb-2">Documentation & Resources</h2>
+    <h3>Inventory Manager</h3>
+
+    <MudPaper Class="pa-6 mb-6" >
+        <ol  style="padding-left: 20px;">
+            <li>Everything from Sales Staff above and:</li>
+            <li>View low-stock and out-of-stock alerts per location in "Alerts".</li>
+            <li>Using the "Alerts" page, create and pack boxes to be picked up and transported to different locations in "Pack a Box".</li>
+            <li>View, update, and create new festival merchandise items in "Product Catalog".</li>
+        </ol>
+    </MudPaper>
+
+    <h3>Admin</h3>
+
+    <MudPaper Class="pa-6 mb-6" >
+        <ol  style="padding-left: 20px;">
+            <li>Everything as from Inventory Manager above and:</li>
+            <li>View and create/update locations for the festival, (theaters or vans) in "Locations".</li>
+            <li>View where merchandise is going or if it has arrived in "Outgoing/Incoming Boxes".</li>
+            <li>Add new users and manage their permissions in "Admin User Management".</li>
+        </ol>
+    </MudPaper>
+
+    <h3>Van Driver</h3>
+
+    <MudPaper Class="pa-6 mb-6" >
+        <ol  style="padding-left: 20px;">
+            <li>Login to access the dashboard and management tools.</li>
+            <li>Use the sidebar to navigate the platform. Refer to "Core Features" above for more detailed descriptions of each page's use.</li>
+            <li>View current deliveries in "Outgoing/Incoming Boxes".</li>
+        </ol>
+    </MudPaper>
+
+    <h2 class="mb-2">How to use Backstage: PDF</h2>
 
     <MudPaper Class="pa-6 mb-6">
        <MudButton Variant="Variant.Filled"
            Color="Color.Primary"
-           Href="https://docs.google.com/document/d/1nF95N21lJMgjo-Bfp0SRCi45RWpoAMTdq1H7tb_-SFo/edit?usp=sharing"
+           Href="https://drive.google.com/file/d/1UdavoX9cnu8DWNJJQC9W19clBHaSiOE4/view?usp=sharing"
            Target="_blank">
-    Open Team Documentation
+    INSTRUCTION MANUAL
 </MudButton>
     </MudPaper>
 
@@ -81,17 +98,22 @@
       <p>Backstage was developed by student developers and designers
       at Columbia College Chicago in partnership with the Chicago International
       Puppet Theater Festival.</p>
+      <b>UX Design Team</b>
+      <p>Ashani Pessigma, Havi Prevard, Jared Tupas, Trang Le, Alex Monzon, Rahaima Khan</p>
+      <b>UI Design Team</b>
+      <p>Trang Le, Megan Oh, Adrian Marquez, Joy Chen</p>
+      <b>Software Development Team</b>
+      <p>Logan Silvers, Tyrone King, Luis A Martinez, Mia Graham, Yunjong Heo</p>
     </MudPaper>
 
     <h2 class="mb-2">Contact Us</h2>
 
     <MudPaper Class="pa-6 mb-6">
-        <p>Bugs reports? Feature requests? Maintenance requests? Contact our development team and we'll get back to you swiftly!</p>
+        <p>Bugs reports? Feature requests? Maintenance requests? Contact our development team and we'll get back to you swiftly.</p>
         <ul style="padding-left: 20px;">
-            <li>Logan Silvers <a href="mailto:loganrsilvers@gmail.com" style="color: #1976d2; text-decoration: underline;">loganrsilvers@gmail.com</a></li>
-            <li>Tyrone King <a href="mailto:tyronek1202@gmail.com" style="color: #1976d2; text-decoration: underline;">tyronek1202@gmail.com</a></li>
-            <li>Luis Martinez <a href="mailto:lamart0805@gmail.com" style="color: #1976d2; text-decoration: underline;">lamart0805@gmail.com</a></li>
-            <li>Ashani Peissigma <a href="mailto:apeissigma@gmail.com" style="color: #1976d2; text-decoration: underline;">apeissigma@gmail.com</a></li>
+            <li>Ashani Peissigma - UX Design<a href="mailto:apeissigma@gmail.com" style="color: #1976d2; text-decoration: underline;">apeissigma@gmail.com</a></li>
+            <li>Trang Le - UI Design</li>
+            <li>Logan Silvers - Tech<a href="mailto:loganrsilvers@gmail.com" style="color: #1976d2; text-decoration: underline;">loganrsilvers@gmail.com</a></li>
         </ul>
 
     </MudPaper>
